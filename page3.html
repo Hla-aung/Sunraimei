@@ -1,0 +1,138 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c6239321c4.js" crossorigin="anonymous"></script>
+    <title>Reservation</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        form{
+            background: url('./images/logo.png') center no-repeat;
+        }
+        fieldset{
+            margin: 30px 50px;
+            padding: 50px;
+            border: 3px double #231f20;
+        }
+        h1{
+            text-transform: uppercase;
+            text-align: center;
+            color: #bf1b2c;
+            text-shadow: 1px 1px 1px #231f20;
+        }
+        h2{
+            color: #bf1b2c;
+            margin-top: 25px;
+        }
+        ul{
+            list-style: square;
+        }
+        label{
+            font-size: 16px;
+            font-weight: 500;
+        }
+        input{
+            padding: 5px;
+        }
+        input[type="submit"], input[type="reset"]{
+            display: block;
+            font-size: 20px;
+            margin: 20px auto 10px;
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover{
+            background-color: #bf1b2c;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="mailto:sunraimei@gmail.com" method="post">
+        <fieldset>
+            <h1>
+                Reserve at Sunraimei Japanese Restaurant
+            </h1>
+            <h2>Message from Venue</h2>
+            <ul>
+                <li>Dinner time on Sundays and holidays will be closed.</li>
+                <li>Please fill in the request column below for allergy information and requests.</li>
+                <li>All seats are non-smoking. Please enjoy the light aroma of tea.</li>
+                <li>If you do not contact us after the arrival time on the day, we may not be able to secure a seat.
+                </li>
+                <li>Please wear a mask before and after meals when you come to the store.</li>
+            </ul>
+            <input type="checkbox" id="msg">
+            <label for="msg">I confirm I've read the Message from venue above.</label><br><br>
+
+            <h2>Reservation Details</h2>
+            <label for="date"><i class="fa-solid fa-calendar-check fa-xl"></i> : </label>
+            <input type="date" name="date" id="date" required><br><br>
+            
+            <label for="time"><i class="fa-solid fa-clock fa-xl"></i> : </label>
+            <input type="time" name="time" id="time" required><br><br>
+
+            <label for="num"><i class="fa-solid fa-user fa-xl"></i> : </label>
+            <input type="number" name="num" id="num" placeholder="Number of People" required><br><br>
+
+            <label for="purpose">Purpose: </label>
+            <select name="purpose" id="purpose">
+                <option value="family">Family</option>
+                <option value="friend">Friends Group</option>
+                <option value="birthday">Birthday</option>
+                <option value="wedding">Wedding Dinner</option>
+                <option value="date">Date</option>
+                <option value="business">Business</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="meal">Select Meal Set: </label>
+            <select name="meal" id="meal" required>
+                <option value="table">Japanese Style Hibachi Table</option>
+                <option value="tea">Tea Ceremony</option>
+                <option value="chajuzen">Chajuzen Set</option>
+                <option value="oyster">Oyster and Mushroom in Tea</option>
+            </select><br><br>
+
+            <label for="request">Request: </label>
+            <textarea name="request" id="request" cols="50" rows="2" placeholder="Request"></textarea>
+
+            <h2>Guest Details</h2>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="First Name" required>
+            <input type="text" name="name" id="name" placeholder="Last Name" required><br><br>
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" required><br><br>
+
+            <label for="tel">Tel: </label>
+            <input type="tel" name="tel" id="tel" placeholder="09123456789">
+
+            <h2>Payment Method</h2>
+            <input type="radio" name="payment" id="visa">
+            <label for="visa"><img src="./images/visa.png" alt="visa" width="50px"></label>
+
+            <input type="radio" name="payment" id="master">
+            <label for="master"><img src="./images/mastercard.png" alt="mastercard" width="50px"></label>
+
+            <input type="radio" name="payment" id="express">
+            <label for="express"><img src="./images/american.jpg" alt="american" width="50px"></label><br><br>
+
+            <label for="card">Card Number:</label>
+            <input type="number" name="card" id="card" required><br><br>
+
+            <label for="cvv">CVV:</label>
+            <input type="number" name="cvv" id="cvv" required><br><br>
+
+            <input type="submit" value="Confirm">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+</body>
+
+</html>
